@@ -99,6 +99,7 @@
 <script>
     var imgArray = <?php if(isset($_SESSION['img_navne'])){echo json_encode($_SESSION['img_navne']);}else{echo "new Array()";} ?>;
 </script>
+<script src="http://skimspots.arpa/add-spot?map=true"></script>
 <script>
     var map;
         var SpotMarker = [];
@@ -124,7 +125,7 @@
             });
 
             // Update lat/long value of div when anywhere in the map is clicked
-            google.maps.event.addListener(map,'click',function(event) {
+            google.maps.event.addListener(map,'click',async function(event) {
 
                 var clickedCoord = {lat: event.latLng.lat(), lng: event.latLng.lng()};
                 if(SpotMarker.length > 0){
@@ -146,30 +147,27 @@
 
                 longitudeCord = event.latLng.lng()
                 latitudeCord = event.latLng.lat()
-                let url = "https://maps.googleapis.com/maps/api/geocode/json?latlng="+latitudeCord+","+longitudeCord+"&key=AIzaSyD1nHBTBTkJtRrWmpJb2ZxihkGiyG5FQO0&language=en";
-                fetch(url)
-                    .then(response => response.json())
-                    .then(data => {                        
-                        let parts = data.results[0].address_components;
-                        parts.forEach(async part => {
-                            if(part.types.includes("country")){
-                                var country = "";
-                                for (i = 0; i < countries.length; i++){
-                                    if(countries[i].value == part.long_name){
-                                        countries[i].selected = "selected";
-                                        for(j = 0; j < continent.length; j++){
-                                            if(countryToContinent.data[part.short_name.toString()] == continent[j].value){
-                                                continent[j].selected = "selected";
-                                            }
-                                        }                                        
+                const reponse = await axios.get("http://skimspots.arpa/add-spot?geocode=true&latitude="+latitudeCord+"&longtitude="+longitudeCord)
+                const data = await reponse.data
+                console.log(data)
+                let parts = data.results[0].address_components;
+                parts.forEach(async part => {
+                    if(part.types.includes("country")){
+                        var country = "";
+                        for (i = 0; i < countries.length; i++){
+                            if(countries[i].value == part.long_name){
+                                countries[i].selected = "selected";
+                                for(j = 0; j < continent.length; j++){
+                                    if(countryToContinent.data[part.short_name.toString()] == continent[j].value){
+                                        continent[j].selected = "selected";
                                     }
-                                }                                
-                            }else{
-                                console.warn("FISK")
+                                }                                        
                             }
-                        });
-                    })
-                    .catch(err => console.warn(err.message));
+                        }                                
+                    }else{
+                        console.warn("FISK")
+                    }
+                });
             });
         }
 
@@ -322,5 +320,7 @@
         }
     });
     }
+    setTimeout(()=> {
+        initMap()
+    },300)
 </script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD1nHBTBTkJtRrWmpJb2ZxihkGiyG5FQO0&callback=initMap" async defer></script>

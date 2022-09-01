@@ -3,10 +3,19 @@
 namespace App\http\Web\Controllers;
 
 use App\http\Web\Controllers\BaseController;
+require(__DIR__."/../../../../_secrets/SecretStuff.php");
 
 class AddSpotController extends BaseController {
-    public function onGet(){
-        $this->view("spot/Add-spot");
+    public function onGet($params){
+        if(count($params) < 2){
+            $this->view("spot/Add-spot");
+        }else if(isset($params['map'])){
+            $this->getMapScript();
+        }else if(isset($params['geocode'])){
+            if(isset($params['latitude']) && isset($params['longtitude'])){
+                $this->getGeocodeData($params['latitude'], $params['longtitude']);
+            }
+        }
     }
 
     public function onPost($params){
@@ -60,5 +69,24 @@ class AddSpotController extends BaseController {
             $response['error'] = $phpFileUploadErrors[$error];
         }
         print_r($response);
+    }
+
+    private function getMapScript(){
+
+        $url = "https://maps.googleapis.com/maps/api/js?key=".GoogleAPIKey();
+
+        $file = file_get_contents($url);
+
+        Header("content-type: application/x-javascript");
+        echo $file;
+    }
+
+    private function getGeocodeData($latitudeCord,$longitudeCord){
+        $url = "https://maps.googleapis.com/maps/api/geocode/json?latlng=".$latitudeCord.",".$longitudeCord."&key=".GoogleAPIKey()."&language=en";
+
+        $file = file_get_contents($url);
+
+        Header("Content-Type: application/json;");
+        echo $file;
     }
 }
