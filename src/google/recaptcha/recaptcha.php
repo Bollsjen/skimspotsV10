@@ -1,7 +1,9 @@
 <?php
+require(__DIR__ . "../../../../_secrets/SecretStuff.php");
+
 if(isset($_POST['g-recapcha-response']) && $_POST['g-recapcha-response'] !== ""){
     function getCapcha($SecretKey){
-      $response = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=6LeZ6mkgAAAAAAJqDlLg044zX9iDmY82C827P1Ve&response={$SecretKey}");
+      $response = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=". RecapchaSecret() ."&response={$SecretKey}");
       $return = json_decode($response);
       return $return;
     }
