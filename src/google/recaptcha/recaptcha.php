@@ -1,5 +1,5 @@
 <?php
-require(__DIR__ . "../../../../_secrets/SecretStuff.php");
+require(__DIR__ . "../../../_secrets/SecretStuff.php");
 
 if(isset($_POST['g-recapcha-response']) && $_POST['g-recapcha-response'] !== ""){
     function getCapcha($SecretKey){

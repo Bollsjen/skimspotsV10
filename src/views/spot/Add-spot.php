@@ -112,7 +112,6 @@
 
         async function initMap() {
             var countryToContinent = await axios.get("http://skimspots.arpa/api/Country?shortnameAndContinent=true")
-            console.log(countryToContinent.data['DE'])
             var latitude = 19.592119419416562; // YOUR LATITUDE VALUE
             var longitude = -16.464734143670757; // YOUR LONGITUDE VALUE
 
