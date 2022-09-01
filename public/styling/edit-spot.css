@@ -1,0 +1,192 @@
+.edit-wrapper {
+    margin: 125px auto 25px auto;
+    width: 92%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 25px;
+}
+
+@media screen and (max-width: 767px){
+    .edit-wrapper {
+        width: 80%;
+    }
+
+    .form-wrapper {
+        grid-column: span 2;
+    }
+    
+    .form-desc {
+        grid-column: span 2;
+    }
+}
+
+@media screen and (min-width: 768px){
+    .edit-wrapper {
+        width: 80%;
+    }
+
+    .form-wrapper {
+        grid-column: span 3;
+    }
+    
+    .form-desc {
+        grid-column: span 3;
+    }
+}
+
+@media screen and (min-width: 1000px){
+    .edit-wrapper {
+        width: 65%;
+    }
+
+    .form-wrapper {
+        grid-column: span 1;
+    }
+
+    .form-desc {
+        grid-column: span 1;
+    }
+}
+
+.form-desc { 
+    margin-top: 25px;
+}
+
+.form-wrapper {
+    margin-top: 25px;
+}
+
+.edit-title {
+    grid-column: span 2;
+    margin: 0;
+}
+
+.edit-title h1 {
+    margin: 0;
+    padding: 0;
+}
+
+.input-container {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    margin: 0px 0px 15px 0px;
+    padding: 0;
+    color: #555;
+  }
+
+  .t-icon {
+    padding: 10px;
+    background: #E5E5E5;
+    color: #555;
+    min-width: 75px;
+    text-align: center;
+    border: 1px solid #CCCCCC;
+    border-radius: 4px 0px 0px 4px;
+  }
+
+  .i-icon {
+    padding: 10px;
+    background: #E5E5E5;
+    color: #555;
+    min-width: 30px;
+    text-align: center;
+    margin: 0;
+    border: 1px solid #CCCCCC;
+    border-radius: 4px 0px 0px 4px;
+  }
+
+  .input-field {
+    width: 100%;
+    padding: 5px;    
+    outline: none;
+    border: 1px solid #CCCCCC;
+    border-radius: 0px 4px 4px 0px;
+    font-size: 16px;
+  }
+
+  .spot-type{
+      width: 60%;
+  }
+
+  .spot-type input {
+      margin: 0px 5px;
+  }
+
+  .spot-type label {
+    margin: 0px 25px 0px 0px;
+}
+
+.spot-type ul{
+    list-style-type: none;
+    margin: 0px;
+    padding: 0;
+}
+
+.spot-type ul li{
+    margin: 10px 0px;
+}
+
+  .input-field select {
+    color: #555;
+    font-family: arial;
+  }
+
+  .input-field option {
+    color: #555;
+  }
+
+  .file-btn {
+      width: 100%;
+      background-color: white;
+      vertical-align: middle;      
+      padding: 0;
+      border: 1px solid #CCCCCC;
+      border-radius: 0px 4px 4px 0px;
+  }
+
+  .file-btn-text {
+    margin: auto 0px auto 5px;
+    padding: 0;
+  }
+
+  .file-btn-text p{      
+      padding: 0;
+      margin-top: 10px;
+      margin-bottom: 0px;
+  }
+
+  form textarea {
+      font-family: arial;
+      width: 100%;
+      border-radius: 4px;
+      border: 1px solid #CCCCCC;
+      padding: 5px;
+      color: black;
+  }
+
+  #img-file {
+      display: none;
+  }
+
+  .submit-btn {
+      padding: 10px;
+      border-radius: 4px;
+      border: none;
+  }
+
+  .form-desc ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+  }
+
+  .form-desc h3 {
+      font-weight: normal;
+      font-size: 22px;
+      margin: 0px;
+      padding: 0px 0px 15px 0px;
+  }
+
+  .nav-tab-spot-edit button:hover {
+      cursor: pointer;
+  }

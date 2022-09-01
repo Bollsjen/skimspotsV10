@@ -1,0 +1,17 @@
+{
+    "name": "skimspots/skimspots",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Magnus",
+            "email": "magnusbolljensen@skimspots.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "App\\": "src"
+        }
+    }
+}

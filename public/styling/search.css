@@ -1,0 +1,48 @@
+.search-wrapper {
+    margin: 100px auto 25px auto;
+    width: 92%;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    display: grid;
+    grid-gap: 10px;
+}
+
+.search-title {
+    grid-column: span 6;
+    margin: 0px;
+    padding: 0;
+}
+
+.search-event-content {
+    grid-column: span 6;
+    margin-bottom: 25px;
+}
+
+.search-event-content a {
+    color: black;
+    text-decoration: none;
+}
+
+.spot-card-info {
+    text-align: left;
+    padding: 15px 25px;
+    margin: 0;
+    border-top: 1px solid #ddd;
+}
+
+.spot-card-info p {
+    font-size: 14px;
+    padding: 0px;
+    margin: 0;
+}
+
+@media screen and (min-width: 768px){
+    .search-wrapper {
+        width: 80%;
+    }
+}
+
+@media screen and (min-width: 1000px){
+    .search-wrapper {
+        width: 65%;
+    }
+}

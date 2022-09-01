@@ -1,0 +1,69 @@
+.create-container {
+    width: 92%;
+    margin: 0px auto;
+}
+
+.create-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 15px;
+}
+
+.create-event-input-container {
+    grid-column: span 2;
+}
+
+.create-event-input-container label {
+    width: 100%;
+}
+
+.create-event-input-container input {
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid #aaa;
+    padding: 5px;
+    font-size: 16px;
+}
+
+.create-event-input-container select {
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid #aaa;
+    padding: 5px;
+    font-size: 16px;
+}
+
+.date-field {
+    font-family: arial;
+}
+
+.upload-box {
+    width: 100%;
+    border: 1px solid black;
+    text-align: center;
+    padding: 10px;
+    border-radius: 4px; 
+}
+
+.banner-preview {
+    width: 100%;
+    max-height: 100px;
+}
+
+.create-event-submit-container {
+    grid-column: span 2;
+}
+
+.create-event-submit-container input {
+    border-radius: 4px;
+    border: 1px solid #aaa;
+    padding: 10px 14px;
+    font-size: 18px;
+    background-color: rgba(2,117,216,1);
+    color: white;
+}
+
+.create-event-submit-container input:hover {
+    cursor: pointer;
+    background-color: rgb(3, 95, 175);
+}

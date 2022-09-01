@@ -1,0 +1,221 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: arial;
+}
+
+#map {
+    height: 100vh;
+    width: 100%;
+}
+
+.toggle-map-main-menu{
+    z-index: 99;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+    color: white;
+}
+
+.toggle-map-main-menu i{
+    margin: 0;
+    padding: 12px;
+    cursor: pointer;
+}
+
+.map-main-menu {
+    z-index: 999;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 400px;
+    height: 100vh;
+    transition: ease-in-out 500ms;
+    max-height: 100vh;
+    overflow-x: hidden;
+}
+
+.map-main-menu-wrapper {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+}
+
+.map-main-menu-top {
+    flex: 0 1 auto;
+    width: 100%;
+    background-color: rgb(255, 24, 24);
+    height: 48px;
+}
+
+.map-main-menu-wrapper h1{
+    font-size: 32px;
+    padding: 5px;
+    margin: 0;
+}
+
+.map-main-menu-description {
+    flex: 0 1 auto;
+    width: calc(100% - 30px);
+    padding: 15px;
+    margin: 0;
+    margin-top: 30px;
+    background-color: #ddd;
+    border-bottom: 1px solid #bbb;
+}
+
+.map-main-menu-content {
+    flex: 1 1 auto;
+    width: 100%;
+    background-color: white;
+}
+
+.map-main-menu-content-hide-overflow {
+    overflow: hidden;
+}
+
+.map-main-menu-content-card button, .spot-btn{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.map-main-menu-content-card #continent{
+    margin: 0px;
+    padding: 10px 15px;
+    font-size: 24px;
+}
+
+.map-main-menu-content-card #country{
+    margin: 0px;
+    padding: 10px 25px;
+    font-size: 20px;
+}
+
+.map-main-menu-content-card .spot-btn{
+    margin: 0px;
+    padding: 10px 35px;
+    float: left;
+    clear: both;
+    font-size: 15px;
+}
+
+
+.collapseible-content{
+    margin: 0;
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-in-out;
+    border-bottom: 1px solid #ddd;    
+}
+
+.infoWindow {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    max-height: 500px;
+}
+
+.infoWindow img{
+    width: 300px;
+    height: 100%;
+}
+
+.infoWindow h2 {
+    margin: 0px 0px 15px 0px;
+}
+
+.spot-info-div {
+    position: absolute;
+    top: 0;
+    left: -400px;
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    z-index: 999999;
+    transition: ease-in-out 500ms;
+}
+
+.spot-info-div img{
+    width: 100%;
+    height: 200px;
+    padding: 0;
+    margin: 0;
+}
+
+.spot-info-top {
+    width: 100%;
+    height: 50px;
+    background-color: rgb(255, 24, 24);
+    margin: 0;
+    padding: 0;
+}
+
+.spot-info-top i{
+    float: left;
+    cursor: pointer;
+    color: white;
+    font-size: 24px;
+    padding: 12px;
+}
+
+.spot-info-top h2{
+    float: left;
+    margin: 12px 0px 0px 0px;
+    color: white;
+}
+
+.spot-info-content {
+    padding: 15px;
+}
+
+.spot-search-div {
+    position: absolute;
+    top: 0;
+    left: -400px;
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    z-index: 999999;
+    transition: ease-in-out 500ms;
+    overflow-x: hidden;
+}
+
+.spot-search-input {
+    width: 100%;
+    display: flex;
+    display: -ms-flexbox;
+}
+
+.spot-search-input input{
+    width: 100%;
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid #bbb;
+    border-radius: 0px 8px 8px 0px;
+}
+
+.spot-search-input-icon {
+    padding: 8px;
+    background-color: #aaa;
+    border-left: 1px solid #bbb;
+    border-top: 1px solid #bbb;
+    border-bottom: 1px solid #bbb;
+    border-radius: 8px 0px 0px 8px;
+}
+
+.spot-search-form {
+    padding: 15px;
+    margin: 0;
+}
+
+.spot-search-contents {
+    padding: 15px;
+    margin: 0;
+}

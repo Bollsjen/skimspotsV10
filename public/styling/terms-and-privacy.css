@@ -1,0 +1,12 @@
+.terms-and-privacy {
+    margin: 125px auto 0px auto;
+    width: 92%;
+}
+
+.terms-and-privacy ul {
+    list-style-type: none;
+}
+
+.terms-and-privacy li {
+    margin: 0px 0px 10px 0px;
+}

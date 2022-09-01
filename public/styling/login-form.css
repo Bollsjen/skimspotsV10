@@ -1,0 +1,99 @@
+.login-form-wrapper {
+    width: 92%;
+    margin: 125px auto 50px auto;
+    grid-template-columns: 1fr 1fr;
+    display: grid;
+}
+
+@media screen and (min-width: 768px){
+    .login-form-wrapper {
+    width: 50%;
+    }
+}
+
+@media screen and (min-width: 1000px){
+    .login-form-wrapper {
+    width: 20%;
+    }
+}
+
+.login-form-title {
+    grid-column: span 2;
+    margin: 0;
+    padding: 0;
+}
+
+.login-form {
+    grid-column: span 2;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+.form {
+    padding: 0px;
+    margin: 0;
+}
+
+.forgot-pass {
+    border-top: 1px solid #ddd;
+}
+
+.forgot-pass p {
+    margin: 0;
+    padding: 5px 10px;
+}
+
+.forgot-pass a {
+    color: black;
+    text-decoration: none;
+}
+
+.forgot-pass a:hover {
+    color: #888;    
+}
+
+.login-form form{
+    padding: 0;
+    margin: 0;
+}
+
+.login-form h3{
+    padding: 0;
+    margin: 0px 0px 15px 0px;
+}
+
+.login-submit-btn {
+    color: white;
+    background-color: #0071FF;
+    border: none;
+    border-radius: 4px;
+    width: 100%;
+    font-size: 16px;
+    padding: 10px
+}
+
+.form-card-top {
+    background-color: #eee;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.form-card-top h3{
+    padding: 0px;
+    margin: 0;
+    font-weight: normal;
+}
+
+.form-card-form {
+    margin: 10px 0px;
+    padding: 10px;
+}
+
+.form-card-part {
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+    color: #666;
+}

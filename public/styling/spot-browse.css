@@ -1,0 +1,41 @@
+#browse-spots {
+    margin-top: 75px;    
+}
+
+.browse-spot-title {
+    grid-column: span 6;
+}
+
+.browse-spots-form {
+    grid-column: span 6;
+}
+
+.browse-spots-form form{
+    grid-template-columns: 1fr 1fr;
+}
+
+.form-input-field {
+    grid-column: span 2;
+    float: right;
+}
+
+#right-select {
+    clear: both;
+    float: right;
+    min-width: 125px;
+    padding: 5px;    
+    outline: none;
+    border: 1px solid #CCCCCC;
+    border-radius: 0px 4px 4px 0px;
+    font-size: 15px;
+}
+
+#left-select {
+    clear: both;
+    float: right;
+    min-width: 75px;
+    padding: 5px;    
+    outline: none;
+    border: 1px solid #CCCCCC;
+    font-size: 15px;
+}

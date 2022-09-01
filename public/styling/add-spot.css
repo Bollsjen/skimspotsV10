@@ -1,0 +1,159 @@
+.add-wrapper{
+    margin: 100px auto 25px auto;
+    width: 92%;
+    grid-template-columns: 1fr 1fr 1fr;
+    display: grid;
+    grid-gap: 10px;
+}
+
+.add-spot-title {
+    margin: 0px;
+    padding: 0;
+    grid-column: span 3;
+}
+
+.map {
+    grid-column: span 3;
+}
+
+#map {
+    min-height: 300px;
+}
+
+#country {
+    width: calc(100% - 50px);
+}
+
+.form-wrapper {
+    margin: 0;
+    grid-column: span 3;
+}
+
+.input-field-coordN {
+    width: calc(50% - 25px);
+    border: 1px solid #CCCCCC;
+    font-size: 16px;
+    padding-left: 5px;
+    margin: 0;
+}
+
+.input-field-coordE {
+    width: calc(50% - 25px);
+    border: 1px solid #CCCCCC;
+    border-radius: 0px 4px 4px 0px;
+    font-size: 16px;
+    padding-left: 5px;
+    margin: 0;
+}
+
+.add-spot-img-preview {
+    overflow: auto;
+    white-space: nowrap;
+    max-width: 390px;
+}
+
+.add-spot-img-preview div{
+    margin: 0px 10px 0px 0px;
+    padding: 0;
+    display: inline-block;
+}
+
+.upload-btn {
+    width: 100%;
+    border: none;
+    padding: 10px;
+    background-color: #0071FF;
+    border-radius: 4px;
+    color: white;
+    font-size: 16px;
+}
+
+.upload-btn:hover {
+    cursor: pointer;
+}
+
+.img-holder {
+    position: relative;
+    overflow: hidden; 
+    height: 80px; 
+    width: 75px;
+}
+
+.img-slet-ikon{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    z-index: 3;
+}
+
+@media screen and (min-width: 768px){
+    #map {
+        min-height: 450px;
+    }
+
+    .add-spot-img-preview {
+        max-width: 720px;
+    }
+}
+
+@media screen and (min-width: 1000px){
+    .add-wrapper{
+        width: 80%;
+    }
+
+    .map {
+        grid-column: span 2;
+    }
+    
+    #map {
+        min-height: 605px;
+    }
+    
+    .form-wrapper {
+        grid-column: span 1;
+    }
+
+    .add-spot-img-preview {
+        max-width: 410px;
+    }
+}
+
+@media screen and (min-width: 1200px){
+    .map {
+        grid-column: span 2;
+    }
+    
+    .form-wrapper {
+        grid-column: span 1;
+    }
+}
+
+@media screen and (min-width: 1400px){
+    .add-wrapper{
+        width: 65%;
+    }
+
+    .map {
+        grid-column: span 2;
+    }
+
+    
+    .form-wrapper {
+        grid-column: span 1;
+    }
+}
+
+@media screen and (min-width: 1550px){
+    .map {
+        grid-column: span 2;
+    }
+
+    #map {
+        min-height: 605px;
+    }
+
+    
+    .form-wrapper {
+        grid-column: span 1;
+    }
+}

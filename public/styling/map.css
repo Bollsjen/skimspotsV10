@@ -1,0 +1,8 @@
+.map-wrapper {
+    width: 100%;
+    margin: 75px 0px 0px 0px;
+}
+
+#map iframe {
+    height: calc(100% - 275px);
+}

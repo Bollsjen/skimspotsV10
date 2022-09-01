@@ -1,0 +1,134 @@
+.spot-container {
+    width: 100%;
+    justify-content: center;
+    justify-items: center;
+    margin-bottom: 25px;
+}
+
+.spot-wrapper {
+    width:92%;    
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 25px;
+}
+
+.top-path {
+    grid-column: span 6;
+    font-size: 16px;
+    margin-top: 25px;
+}
+
+.top-path a{
+    color: black;
+    text-decoration: none;
+}
+
+.top-path a:hover{
+    color: #aaa;
+}
+
+.top-path .spot{
+    color: #aaa;
+}
+
+.top-path input{
+    font-size: 16px;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+}
+
+.top-path input:hover{
+    cursor: pointer;
+    color: #aaa;
+}
+
+.spot-title {
+    grid-column: span 6;
+    margin: 0px 0px 15px 0px;
+}
+
+.rating-btn {
+    border: none;
+    background-color: transparent;
+    float: left;
+    margin: 0;
+    padding: 0px 10px 0px 0px;
+}
+
+@media only screen and (max-width: 767px){
+    .spot-title {
+        grid-column: span 6;
+        margin: 0px 0px 15px 0px;
+    }
+
+    .rating-system {
+        grid-column: span 6;
+    }
+
+    .rating-btn {
+        border: none;
+        background-color: transparent;
+        float: left;
+        margin: 0;
+        padding: 0px 10px 0px 0px;
+    }
+}
+
+@media only screen and (min-width: 768px){
+    .spot-title {
+        margin: 0px 0px 15px 0px;
+        grid-column: span 4;        
+    }
+
+    .rating-system {
+        grid-column: span 3;
+    }
+
+    .rating-btn {
+        border: none;
+        background-color: transparent;
+        float: right;
+        margin: 0;
+        padding: 0px 10px 0px 0px;
+    }
+}
+
+@media only screen and (min-width: 1000px){
+    .spot-title {
+        margin: 0px 0px 15px 0px;
+        grid-column: span 4;        
+    }
+
+    .rating-system {
+        grid-column: span 3;
+    }
+
+    .rating-btn {
+        border: none;
+        background-color: transparent;
+        float: right;
+        margin: 0;
+        padding: 0px 10px 0px 0px;
+    }
+}
+
+@media only screen and (min-width: 1200px){
+    .spot-title {
+        margin: 0px 0px 15px 0px;
+        grid-column: span 4;        
+    }
+
+    .rating-system {
+        grid-column: span 3;
+    }
+
+    .rating-btn {
+        border: none;
+        background-color: transparent;
+        float: right;
+        margin: 0;
+        padding: 0px 10px 0px 0px;
+    }
+}
