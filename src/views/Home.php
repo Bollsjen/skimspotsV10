@@ -269,4 +269,3 @@
 </main>
 
 <script src="/public/js/HomeCardAnimations.js"></script>
-

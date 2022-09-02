@@ -1,5 +1,4 @@
 <?php
-
 namespace App\http\Web\Controllers;
 
 use App\datatypes\DataList;
