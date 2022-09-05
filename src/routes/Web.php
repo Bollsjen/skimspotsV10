@@ -19,13 +19,15 @@ class Web{
         Router::get('/', HomeController::class . '::index');
         Router::get('/about', AboutController::class . '::index');
         Router::get("/browse-spots", BrowseSpotsController::class . '::index');
-        Router::post("/browse-spots", BrowseSpotsController::class . '::post');
+        Router::post("/browse-spots", BrowseSpotsController::class . '::index');
         
         Router::get("/spot", SpotController::class . '::index');
         Router::post("/search", SearchController::class . '::index');
 
         Router::get("/add-spot", AddSpotController::class . '::onGet');
         Router::post("/add-spot", AddSpotController::class . '::onPost');
+        Router::put("/add-spot", AddSpotController::class . '::onPut');
+        Router::delete("/add-spot", AddSpotController::class . '::onDelete');
         Router::get("/edit-spot", EditSpotController::class . '::onGet');
 
         //Router::get("/import-spots/", ImportSpots::class . '::index');

@@ -24,6 +24,16 @@ class AddSpotController extends BaseController {
         }
     }
 
+    public function onPut($params){
+        echo "This a put request ";
+        print_r($params);
+    }
+
+    public function onDelete($params){
+        echo "This a delete request ";
+        print_r($params);
+    }
+
     private function handleImage($file){
         $phpFileUploadErrors = array(
             0 => 'Ingen fejl, billede er uploadet',
@@ -55,9 +65,9 @@ class AddSpotController extends BaseController {
         if($error === 0){
             $date = date("Y-m-d");
             $fileNameNew = uniqid('', true) . "---" . $date . "---" . "." . $actualExt;
-            $fileDestination = "../../../../public/img/add-spot/" . $fileNameNew;
+            $fileDestination = __DIR__ . "/../../../../public/img/add-spot/" . $fileNameNew;
             if(move_uploaded_file($tmpName, $fileDestination)){                
-                if(is_dir($fileDestination) && is_writable($fileDestination)){
+                if(file_exists($fileDestination)){
                     $response['success'] = $fileNameNew;
                 }else{
                     $response['error'] = "Failed";
@@ -68,7 +78,7 @@ class AddSpotController extends BaseController {
         }else{
             $response['error'] = $phpFileUploadErrors[$error];
         }
-        print_r($response);
+        echo json_encode($response);
     }
 
     private function getMapScript(){

@@ -49,16 +49,4 @@ class BrowseSpotsController extends BaseController{
             $this->view("browse-spots/Browse", $data);
         }
     }
-
-    public function post($params){
-        $data = $params;
-        $data['spots'] = $this->GetSpotsWithSort($params);
-
-        $data['countries'] = $this->_countryService->GetAll("SELECT countries.ID, countries.Code, countries.Country, countries.Phone, countries.Continent FROM countries
-        JOIN skimspots ON skimspots.Country_ID = countries.ID
-        GROUP BY countries.ID
-        ORDER BY countries.Country");
-
-        $this->view("browse-spots/Browse", $data);
-    }
 }
